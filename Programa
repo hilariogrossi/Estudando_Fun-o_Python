@@ -1,0 +1,32 @@
+from time import sleep
+
+print('=' * 50)
+print('Analisando os valores passados...')
+sleep(1.5)
+
+
+def maior(* dados):
+    contador = maior_valor = 0
+    for valor in dados:
+        print(f'{valor}', end=', ')
+        sleep(0.25)
+
+        if contador == 0:
+            maior_valor = valor
+        else:
+            if valor > maior_valor:
+                maior_valor = valor
+
+        contador += 1
+
+    print(f'foram passados {contador} valores.')
+    print(f'O maior valor foi {maior_valor}.')
+    print('=' * 50)
+    sleep(0.75)
+
+
+maior(9, 7, 11, 58, 21, 68, 74)
+maior(1, 5, 1149)
+maior(-15, -30, -11, 1, 0)
+maior(-10, 10)
+maior()
